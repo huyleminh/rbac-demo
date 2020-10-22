@@ -1,0 +1,81 @@
+[
+    {
+        "id": "F1",
+        "formula": [
+            {
+                "target": null,
+                "idPermission": "P1"                
+            },
+            {
+                "target": "2",
+                "idPermission": "P4"
+            }
+        ]
+    },
+    {
+        "id": "F2",
+        "formula": [
+            {
+                "target": null,
+                "idPermission": "P4"
+            },
+            {
+                "target": "2",
+                "idPermission": "P1"
+            }
+        ]
+    },
+    {
+        "id": "F3",
+        "formula": [
+            {
+                "target": null,
+                "idPermission": "P2"
+            }
+        ]
+    },
+    {
+        "id": "F4",
+        "formula": [
+            {
+                "target": null,
+                "idPermission": "P1"
+            }
+        ]
+    },
+    {
+        "id": "F5",
+        "formula": [
+            {
+                "target": null,
+                "idPermission": "P3"
+            }
+        ]
+    },
+    {
+        "id": "F6",
+        "formula": [
+            {
+                "target": null,
+                "idPermission": "P1"                
+            },
+            {
+                "target": "3",
+                "idPermission": "P4"
+            }
+        ]
+    },
+    {
+        "id": "F7",
+        "formula": [
+            {
+                "target": null,
+                "idPermission": "P1"                
+            },
+            {
+                "target": "3",
+                "idPermission": "P1"
+            }
+        ]
+    }
+]
