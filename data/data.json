@@ -1,0 +1,158 @@
+[
+    {
+        "id": "1",
+        "code": "A1",
+        "name": "N1",
+        "idParent": null
+    },
+    {
+        "id": "2",
+        "code": "A2",
+        "name": "N2",
+        "idParent": null
+    },
+    {
+        "id": "3",
+        "code": "A3",
+        "name": "N3",
+        "idParent": null
+    },
+    {
+        "id": "4",
+        "code": "A4",
+        "name": "N4",
+        "idParent": "1"
+    },
+    {
+        "id": "5",
+        "code": "A5",
+        "name": "N5",
+        "idParent": "1"
+    },
+    {
+        "id": "6",
+        "code": "A6",
+        "name": "N6",
+        "idParent": "2"
+    },
+    {
+        "id": "7",
+        "code": "A7",
+        "name": "N7",
+        "idParent": "2"
+    },
+    {
+        "id": "8",
+        "code": "A8",
+        "name": "N8",
+        "idParent": "3"
+    },
+    {
+        "id": "9",
+        "code": "A9",
+        "name": "N9",
+        "idParent": "4"
+    },
+    {
+        "id": "10",
+        "code": "A10",
+        "name": "N10",
+        "idParent": "5"
+    },
+    {
+        "id": "11",
+        "code": "A11",
+        "name": "N11",
+        "idParent": "5"
+    },
+    {
+        "id": "12",
+        "code": "A12",
+        "name": "N12",
+        "idParent": "6"
+    },
+    {
+        "id": "13",
+        "code": "A13",
+        "name": "N13",
+        "idParent": "7"
+    },
+    {
+        "id": "14",
+        "code": "A14",
+        "name": "N14",
+        "idParent": "8"
+    },
+    {
+        "id": "15",
+        "code": "A15",
+        "name": "N15",
+        "idParent": "10"
+    },
+    {
+        "id": "16",
+        "code": "A16",
+        "name": "N16",
+        "idParent": "3"
+    },
+    {
+        "id": "17",
+        "code": "A17",
+        "name": "N17",
+        "idParent": "16"
+    },
+    {
+        "id": "18",
+        "code": "A18",
+        "name": "N18",
+        "idParent": "1"
+    },
+    {
+        "id": "19",
+        "code": "A19",
+        "name": "N19",
+        "idParent": "1"
+    },
+    {
+        "id": "20",
+        "code": "A20",
+        "name": "N20",
+        "idParent": "1"
+    },
+    {
+        "id": "21",
+        "code": "A21",
+        "name": "N21",
+        "idParent": "2"
+    },
+    {
+        "id": "22",
+        "code": "A22",
+        "name": "N22",
+        "idParent": "2"
+    },
+    {
+        "id": "23",
+        "code": "A23",
+        "name": "N23",
+        "idParent": "3"
+    },
+    {
+        "id": "24",
+        "code": "A24",
+        "name": "N24",
+        "idParent": "3"
+    },
+    {
+        "id": "25",
+        "code": "A25",
+        "name": "N25",
+        "idParent": "4"
+    },
+    {
+        "id": "26",
+        "code": "A26",
+        "name": "N26",
+        "idParent": "4"
+    }
+]
