@@ -1,0 +1,107 @@
+{
+    "view": {
+        "employee": [
+            {
+                "id": 1,
+                "title": "Danh sách",
+                "path": "/manager/user"
+            }
+        ],
+        "collaborator": [
+            {
+                "id": 1,
+                "title": "Danh sách",
+                "path": "/manager/user"
+            }
+        ],
+        "orgazination": [
+            {
+                "id": 1,
+                "title": "Danh sách tổ chức",
+                "path": "/organization"
+            }
+        ],
+        "unit": [
+            {
+                "id": 1,
+                "title": "Danh sách đơn vị",
+                "path": "/unit"
+            }
+        ],
+        "unitType": [
+            {
+                "id": 1,
+                "title": "Danh sách loại đơn vị",
+                "path": "/unitType"
+            }
+        ],
+        "position": [
+            {
+                "id": 1,
+                "title": "Danh sách chức danh",
+                "path": "/position"
+            }
+        ]
+    },
+    "create": {
+        "employee": [
+            {
+                "id": 1,
+                "title": "Thêm mới nhân viên",
+                "path": "/manager/employee/create"
+            }
+        ],
+        "collaborator": [
+            {
+                "id": 1,
+                "title": "Thêm mới cộng tác viên",
+                "path": "/manager/collaborators/create"
+            }
+        ],
+        "orgazination": [
+            {
+                "id": 1,
+                "title": "Thêm mới tổ chức",
+                "path": "/organization/create"
+            }
+        ],
+        "unit": [
+            {
+                "id": 1,
+                "title": "Thêm mới đơn vị",
+                "path": "/unit/create"
+            }
+        ],
+        "unitType": [
+            {
+                "id": 1,
+                "title": "Thêm mới loại đơn vị",
+                "path": "/unitType/create"
+            }
+        ],
+        "position": [
+            {
+                "id": 1,
+                "title": "Thêm mới chức danh",
+                "path": "/position"
+            }
+        ]
+    },
+    "approve": {
+        "employee": [
+            {
+                "id": 1,
+                "title": "Duyệt nhân viên",
+                "path": "/manager/employee/approve"
+            }
+        ],
+        "collaborator": [
+            {
+                "id": 1,
+                "title": "Duyệt cộng tác viên",
+                "path": "/manager/collaborators/approve"
+            }
+        ]
+    },
+    "transfer": {}
+}
