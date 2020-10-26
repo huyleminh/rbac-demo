@@ -1,10 +1,10 @@
 import {
-    User
+    UserRole
 } from "../Interface/BaseInterface";
 import * as fs from "fs";
 
 export default class DeleteUser {
-    private _data: User[];
+    private _data: UserRole[];
 
     constructor() {
         this._data = require("../../data/users.json");

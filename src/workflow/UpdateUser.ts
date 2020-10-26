@@ -1,11 +1,11 @@
 import { 
-    User, 
+    UserRole, 
     RolesList 
 } from "../Interface/BaseInterface";
 import * as fs from "fs";
 
 export default class UpdateUser {
-    private _data: User[];
+    private _data: UserRole[];
 
     constructor() {
         this._data = require("../../data/users.json");

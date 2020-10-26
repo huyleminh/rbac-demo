@@ -1,14 +1,14 @@
 import * as fs from "fs";
-import { User } from "../Interface/BaseInterface";
+import { UserRole } from "../Interface/BaseInterface";
 
 export default class CreateUser {
-    private _data: User[];
+    private _data: UserRole[];
 
     constructor() {
       this._data = require("../../data/users.json");
     }
 
-    public createNewUser = (user: User) => {
+    public createNewUser = (user: UserRole) => {
         if (user.name === "" || null)
             return "Undefined user";
         const names: string[] = this._data.map(item => item.name);

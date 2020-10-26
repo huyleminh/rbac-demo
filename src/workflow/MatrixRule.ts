@@ -1,4 +1,4 @@
-import { User } from "src/Interface/BaseInterface";
+import { UserRole } from "src/Interface/BaseInterface";
 
 export default class MatrixRule {
     private _matrix: Array<Array<any>>;
@@ -49,7 +49,7 @@ export default class MatrixRule {
         return this._matrix
     }
 
-    public enforce = (user: User) => {
+    public enforce = (user: UserRole) => {
         const roles = user.roles;
         if (roles === "root" || roles === "all")
             return true;
