@@ -1,4 +1,4 @@
-export interface User {
+export interface UserRole {
     name: string
     roles: string | RolesList
 }
@@ -10,22 +10,33 @@ export interface RolesList {
     transfer?: Array<string>
 }
 
-export interface Node {
-    id: string,
-    code: string,
-    name: string,
-    idParent: string
+export interface UnitNode {
+    idUnit: string,
+    idOrg: string,
+    idParent: string | null
+    name: string
 }
 
-export interface Formula {
-    id: string,
-    formula: Array<{
-        target: string | null,
-        idPermission: string
-    }>
+export interface Orgazination {
+    idOrg: string,
+    name: string
+}
+
+export interface User {
+    idUser: string,
+    idOrg: string,
+    idUnit: string
 }
 
 export interface Permission {
-    id: string,
-    view: string
+    isOnlyOrg: boolean,
+    listOrgs: Array<string> | null,
+    type: Array<string>,
+    idUser: string
+}
+
+export interface SpecialPermission {
+    idUser: string,
+    idRootUnit: string,
+    type: string
 }
