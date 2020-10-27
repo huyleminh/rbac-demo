@@ -1,0 +1,27 @@
+[
+    {
+        "idUser": "us-1",
+        "idOrg": "O-1",
+        "idUnit": "1"
+    },
+    {
+        "idUser": "us-2",
+        "idOrg": "O-1",
+        "idUnit": "1"
+    },
+    {
+        "idUser": "us-3",
+        "idOrg": "O-1",
+        "idUnit": "1"
+    },
+    {
+        "idUser": "us-4",
+        "idOrg": "O-1",
+        "idUnit": "5"
+    },
+    {
+        "idUser": "us-5",
+        "idOrg": "O-1",
+        "idUnit": "6"
+    }
+]
