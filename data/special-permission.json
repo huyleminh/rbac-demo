@@ -1,0 +1,22 @@
+[
+    {
+        "idUser": "us-3",
+        "idRootUnit": "3",
+        "type": "child"
+    },
+    {
+        "idUser": "us-4",
+        "idRootUnit": "7",
+        "type": "all"
+    },
+    {
+        "idUser": "us-5",
+        "idRootUnit": "2",
+        "type": "all"
+    },
+    {
+        "idUser": "us-5",
+        "idRootUnit": "3",
+        "type": "all"
+    }    
+]
