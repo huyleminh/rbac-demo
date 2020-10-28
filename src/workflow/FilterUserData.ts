@@ -54,8 +54,7 @@ export default class FilterUserData {
     public filterByIdUser = (idUser: string) => {
         let result: Array<UnitNode> = [];
         const userInformation = this.getUserInformation(idUser);
-        
-        const userPermissions = PermissionData.init().getPermission(idUser);
+        const userPermissions = PermissionData.init().getPermissionById(idUser);
         
         //Find user permission
         if (userPermissions === -1) 
@@ -69,8 +68,7 @@ export default class FilterUserData {
         let targets: Array<{
             idUnit: string,
             type: string
-        }> = this.getTargetToFilter(userPermissions, userInformation)
-        .filter(target => {
+        }> = this.getTargetToFilter(userPermissions, userInformation).filter(target => {
             for (let org of userPermissions.listOrgs) {
                 const list = UnitTree.init().filterUnitIdByOrgId(org);
                 if (list.indexOf(target.idUnit) !== -1)
@@ -94,6 +92,10 @@ export default class FilterUserData {
                     if (typeof(node) !== "string")
                         result = result.concat(node);
                 default: 
+                    if (target.type.match(/^(child-)\d$/g) === null) 
+                        break;
+                    const childLevel = target.type.split("-");
+                    result = result.concat(UnitTree.init().getChildrenNodeByLevel(target.idUnit, parseInt(childLevel[1])));
                     break;
             }
         })
