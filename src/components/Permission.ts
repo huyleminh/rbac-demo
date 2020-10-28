@@ -11,24 +11,18 @@ export default class PermissionData {
         return new PermissionData();
     }
 
-    public getPermission = (idUser: string) => {
+    public getPermissionById = (idUser: string) => {
         let permissions: Array<Permission> = this._permissions.slice();
-        permissions.push(
-            {
-                isOnlyOrg: true,
-                listOrgs: null,
-                type: [],
-                idUser: idUser
-            }
-        )
+        permissions.push({
+            isOnlyOrg: true,
+            listOrgs: null,
+            type: [],
+            idUser: idUser
+        })
 
         let index = 0;
-        for (let i = 0; ;i++) {
-            if (permissions[i].idUser === idUser) {
-                index = i;
-                break;
-            }
-        }
+        while (permissions[index].idUser !== idUser)
+            index++;
 
         return (index === permissions.length - 1) ? -1 : permissions[index];
     }
