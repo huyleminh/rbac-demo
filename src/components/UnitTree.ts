@@ -21,11 +21,9 @@ export default class UnitTree {
         })
 
         let index = 0;
-        for (let i = 0; ; i++) 
-            if (unitTree[i].idUnit === idUnit) {
-                index = i;
-                break;
-            }
+        while (unitTree[index].idUnit !== idUnit) 
+            index++;
+        
         return (index === unitTree.length -1) ? -1 : index;
     }
 
@@ -49,6 +47,31 @@ export default class UnitTree {
         for (let i = 0; i < this._unitTree.length; i++) {
             if (this._unitTree[i].idParent === idParent)
                 result.push(this._unitTree[i]);
+        }
+        return result;
+    }
+
+    public getChildrenNodeByLevel = (idParent: string | null, levels: number) => {
+        let result: Array<UnitNode> = [];
+        if (levels === 0)
+            return result;
+            
+        let parentIndex = 0;
+        if (idParent !== null)
+            parentIndex = this.findUnitNode(idParent);
+        if (parentIndex === -1)
+            return result;
+
+        let temp: Array<UnitNode> = this.getChildrenNodeOf(idParent);
+        result = result.concat(temp);
+
+        for (let i = 1; i < levels; i++) {
+            let child: Array<UnitNode> = [];
+            for (let j = 0; j < temp.length; j++) {
+                child = child.concat(this.getChildrenNodeOf(temp[j].idUnit));
+            }
+            result = result.concat(child);
+            temp = child;
         }
         return result;
     }
