@@ -28,5 +28,11 @@
         "listOrgs": ["O-2", "O-3"],
         "type": ["self", "special"],
         "idUser": "us-5"
+    },
+    {
+        "isOnlyOrg": false,
+        "listOrgs": ["O-1"],
+        "type": ["child-3"],
+        "idUser": "us-6"
     }
 ]
