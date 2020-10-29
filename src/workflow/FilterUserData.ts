@@ -26,16 +26,19 @@ export default class FilterUserData {
         return special.filter(item => item.idUser === idUser);
     }
 
-    private getTargetToFilter = (permission: Permission, information: User) => {
-        let listTempTargets = permission.type.map(item => {
-            if (item !== "special") 
-                return {idUnit: information.idUnit, type: item}
+    private getTargetToFilter = (permissions: Array<Permission>, information: User) => {        
+        let listTempTargets = permissions
+        .map(permission => {
+            if (permission.type !== "special") 
+                return {idUnit: information.idUnit, type: permission.type}
             else {
+                //get special target
                 const special = this.getSpecialPermissionById(information.idUser)
-                .map(e => {
-                    return {idUnit: e.idRootUnit, type: e.type};
+                .map(item => {
+                    if (UnitTree.init().validateUnitByOrg(item.idRootUnit, permission.idOrg))
+                        return {idUnit: item.idRootUnit, type: item.type}
                 })
-                return special
+                return special;
             }
         })
         
@@ -45,10 +48,11 @@ export default class FilterUserData {
                 for (let subItem of item) 
                     targets.push(subItem);
             }
-            else 
-                targets.push(item);
+            else targets.push(item);
         }
-        return targets;
+        console.log(targets);
+        
+        return targets.filter(target => target !== undefined)
     }
 
     public filterByIdUser = (idUser: string) => {
@@ -57,25 +61,15 @@ export default class FilterUserData {
         const userPermissions = PermissionData.init().getPermissionById(idUser);
         
         //Find user permission
-        if (userPermissions === -1) 
+        if (userPermissions.length === 0)
             return result;
-
-        if (userPermissions.listOrgs === null) {
-            return this.getOrgazinationById(userInformation.idOrg);
-        }
 
         // return targets;
         let targets: Array<{
             idUnit: string,
             type: string
-        }> = this.getTargetToFilter(userPermissions, userInformation).filter(target => {
-            for (let org of userPermissions.listOrgs) {
-                const list = UnitTree.init().filterUnitIdByOrgId(org);
-                if (list.indexOf(target.idUnit) !== -1)
-                    return true;
-            }
-            return false;
-        })
+        }> = this.getTargetToFilter(userPermissions, userInformation)
+        console.log(targets);
 
         targets.forEach(target => {
             switch (target.type) {
@@ -99,7 +93,10 @@ export default class FilterUserData {
                     break;
             }
         })
-
-        return result;
+        
+        return {
+            org: this.getOrgazinationById(userInformation.idOrg),
+            unit: result
+        }
     }
 }
