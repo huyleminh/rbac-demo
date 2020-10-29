@@ -29,9 +29,8 @@ export interface User {
 }
 
 export interface Permission {
-    isOnlyOrg: boolean,
-    listOrgs: Array<string> | null,
-    type: Array<string>,
+    idOrg: string,
+    type: string,
     idUser: string
 }
 
