@@ -8,6 +8,14 @@ import FilterUserData from "src/workflow/FilterUserData";
 export default class DataController {
     @Get("/view")
     public viewData() {
-        return FilterUserData.init().filterByIdUser("us-5");
+        let result = [];
+        for (let i = 0; i < 7; i++) {
+            const user = "us-" + (i + 1);
+            result.push({
+                userId: user,
+                data: FilterUserData.init().filterByIdUser(user)
+            })
+        }
+        return result
     }
 }
