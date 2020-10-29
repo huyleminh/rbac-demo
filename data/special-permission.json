@@ -1,22 +1,22 @@
 [
     {
-        "idUser": "us-3",
-        "idRootUnit": "3",
-        "type": "child"
-    },
-    {
-        "idUser": "us-4",
+        "idUser": "us-1",
         "idRootUnit": "7",
         "type": "all"
     },
     {
-        "idUser": "us-5",
+        "idUser": "us-2",
         "idRootUnit": "2",
-        "type": "all"
+        "type": "self"
     },
     {
-        "idUser": "us-5",
+        "idUser": "us-2",
         "idRootUnit": "3",
-        "type": "all"
+        "type": "child"
+    },
+    {
+        "idUser": "us-3",
+        "idRootUnit": "2",
+        "type": "child-2"
     }    
 ]

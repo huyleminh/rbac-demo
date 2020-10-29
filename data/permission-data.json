@@ -1,38 +1,57 @@
 [
     {
-        "isOnlyOrg": true,
-        "listOrgs": null,
-        "type": ["self"],
+        "idOrg": "O-1",
+        "type": "self",
         "idUser": "us-1"
     },
     {
-        "isOnlyOrg": false,
-        "listOrgs": ["O-1", "O-2"],
-        "type": ["all"],
+        "idOrg": "O-2",
+        "type": "special",
+        "idUser": "us-1"
+    },
+    {
+        "idOrg": "O-1",
+        "type": "child",
         "idUser": "us-2"
     },
     {
-        "isOnlyOrg": false,
-        "listOrgs": ["O-1", "O-3"],
-        "type": ["child", "special"],
+        "idOrg": "O-2",
+        "type": "special",
+        "idUser": "us-2"
+    },
+    {
+        "idOrg": "O-3",
+        "type": "special",
+        "idUser": "us-2"
+    },
+    {
+        "idOrg": "O-1",
+        "type": "all",
         "idUser": "us-3"
     },
     {
-        "isOnlyOrg": false,
-        "listOrgs": ["O-1", "O-2"],
-        "type": ["all", "special"],
+        "idOrg": "O-2",
+        "type": "special",
+        "idUser": "us-3"
+    },
+    {
+        "idOrg": "O-1",
+        "type": "all",
         "idUser": "us-4"
     },
     {
-        "isOnlyOrg": false,
-        "listOrgs": ["O-2", "O-3"],
-        "type": ["self", "special"],
+        "idOrg": "O-1",
+        "type": "child",
         "idUser": "us-5"
     },
     {
-        "isOnlyOrg": false,
-        "listOrgs": ["O-1"],
-        "type": ["child-3"],
+        "idOrg": "O-1",
+        "type": "self",
         "idUser": "us-6"
+    },
+    {
+        "idOrg": "O-1",
+        "type": "child-2",
+        "idUser": "us-7"
     }
 ]

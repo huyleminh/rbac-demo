@@ -28,5 +28,10 @@
         "idUser": "us-6",
         "idOrg": "O-1",
         "idUnit": "5"
+    },
+    {
+        "idUser": "us-7",
+        "idOrg": "O-1",
+        "idUnit": "5"
     }
 ]
