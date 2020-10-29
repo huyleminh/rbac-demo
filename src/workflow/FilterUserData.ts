@@ -50,8 +50,7 @@ export default class FilterUserData {
             }
             else targets.push(item);
         }
-        console.log(targets);
-        
+        //Remove undefined target from map method
         return targets.filter(target => target !== undefined)
     }
 
@@ -69,7 +68,6 @@ export default class FilterUserData {
             idUnit: string,
             type: string
         }> = this.getTargetToFilter(userPermissions, userInformation)
-        console.log(targets);
 
         targets.forEach(target => {
             switch (target.type) {

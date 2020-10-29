@@ -55,13 +55,15 @@ export default class UnitTree {
         let result: Array<UnitNode> = [];
         if (levels === 0)
             return result;
-            
+        
+        //Find the parent node
         let parentIndex = 0;
         if (idParent !== null)
             parentIndex = this.findUnitNode(idParent);
         if (parentIndex === -1)
             return result;
 
+        //Level 1
         let temp: Array<UnitNode> = this.getChildrenNodeOf(idParent);
         result = result.concat(temp);
 
