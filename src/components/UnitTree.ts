@@ -91,4 +91,12 @@ export default class UnitTree {
             result = result.concat(this.getSubTreeFromUnit(childs[i].idUnit));
         return result
     }
+
+    public validateUnitByOrg = (idUnit: string, idOrg: string) => {
+        const listUnit = this.filterUnitIdByOrgId(idOrg);
+        for (let unit of listUnit) 
+            if (unit === idUnit)
+                return true;
+        return false;
+    }
 }
