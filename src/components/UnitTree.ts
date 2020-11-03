@@ -27,8 +27,8 @@ export default class UnitTree {
         return (index === unitTree.length -1) ? -1 : index;
     }
 
-    public filterUnitIdByOrgId = (org: string) => {
-        return this._unitTree.filter(unit => unit.idOrg === org).map(unit => unit.idUnit)
+    public filterUnitByOrgId = (org: string) => {
+        return this._unitTree.filter(unit => unit.idOrg === org)
     }
 
     public getUnitNode = (idUnit: string) => {
@@ -78,7 +78,12 @@ export default class UnitTree {
         return result;
     }
 
-    public getSubTreeFromUnit = (idUnit: string | null) => {
+    public getSubTreeFromUnit = (idUnit: string | null, idOrg?: string) => {
+        if (idUnit === null) {
+            if (idOrg) 
+                return this.filterUnitByOrgId(idOrg);
+        }
+        
         let result: Array<UnitNode> = [];
         const node = this.getUnitNode(idUnit);
         if (node === "Not found") {
@@ -94,8 +99,10 @@ export default class UnitTree {
         return result
     }
 
-    public validateUnitByOrg = (idUnit: string, idOrg: string) => {
-        const listUnit = this.filterUnitIdByOrgId(idOrg);
+    public validateUnitByOrg = (idUnit: string | null, idOrg: string) => {
+        if (idUnit === null)
+            return true;
+        const listUnit = this.filterUnitByOrgId(idOrg).map(unit => unit.idUnit);
         for (let unit of listUnit) 
             if (unit === idUnit)
                 return true;

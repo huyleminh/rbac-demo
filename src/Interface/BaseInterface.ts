@@ -36,6 +36,6 @@ export interface Permission {
 
 export interface SpecialPermission {
     idUser: string,
-    idRootUnit: string,
+    idRootUnit: string | null,
     type: string
 }

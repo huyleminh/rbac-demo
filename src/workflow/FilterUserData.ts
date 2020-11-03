@@ -26,7 +26,7 @@ export default class FilterUserData {
         return special.filter(item => item.idUser === idUser);
     }
 
-    private getTargetToFilter = (permissions: Array<Permission>, information: User) => {        
+    private getTargetToFilter = (permissions: Array<Permission>, information: User) => {
         let listTempTargets = permissions
         .map(permission => {
             if (permission.type !== "special") 
@@ -35,8 +35,11 @@ export default class FilterUserData {
                 //get special target
                 const special = this.getSpecialPermissionById(information.idUser)
                 .map(item => {
-                    if (UnitTree.init().validateUnitByOrg(item.idRootUnit, permission.idOrg))
+                    if (UnitTree.init().validateUnitByOrg(item.idRootUnit, permission.idOrg)) {
+                        if (item.idRootUnit === null)
+                            return {idUnit: item.idRootUnit, type: item.type, idOrg: permission.idOrg}
                         return {idUnit: item.idRootUnit, type: item.type}
+                    }
                 })
                 return special;
             }
@@ -58,7 +61,7 @@ export default class FilterUserData {
         let result: Array<UnitNode> = [];
         const userInformation = this.getUserInformation(idUser);
         const userPermissions = PermissionData.init().getPermissionById(idUser);
-        
+
         //Find user permission
         if (userPermissions.length === 0)
             return result;
@@ -66,13 +69,17 @@ export default class FilterUserData {
         // return targets;
         let targets: Array<{
             idUnit: string,
-            type: string
+            type: string,
+            idOrg?: string
         }> = this.getTargetToFilter(userPermissions, userInformation)
 
         targets.forEach(target => {
             switch (target.type) {
                 case "all":
-                    result = result.concat(UnitTree.init().getSubTreeFromUnit(target.idUnit));
+                    if (target.idUnit === null)
+                        result = result.concat(UnitTree.init().getSubTreeFromUnit(target.idUnit, target.idOrg))
+                    else 
+                        result = result.concat(UnitTree.init().getSubTreeFromUnit(target.idUnit));
                     break;
                 case "child":
                     const list = UnitTree.init().getSubTreeFromUnit(target.idUnit);
