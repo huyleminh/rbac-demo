@@ -1,14 +1,14 @@
 [
     {
-        "idOrg": "O-1",
+        "idOrg": "01",
         "name": "Orgazination-1"
     },
     {
-        "idOrg": "O-2",
+        "idOrg": "02",
         "name": "Orgazination-2"
     },
     {
-        "idOrg": "O-3",
+        "idOrg": "03",
         "name": "Orgazination-3"
     }
 ]

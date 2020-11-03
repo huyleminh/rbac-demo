@@ -1,57 +1,112 @@
 [
     {
-        "idOrg": "O-1",
+        "idOrg": "01",
+        "type": "special",
+        "idUser": "U1"
+    },
+    {
+        "idOrg": "02",
+        "type": "special",
+        "idUser": "U1"
+    },
+    {
+        "idOrg": "03",
+        "type": "special",
+        "idUser": "U1"
+    },
+    {
+        "idOrg": "02",
+        "type": "special",
+        "idUser": "U2"
+    },
+    {
+        "idOrg": "03",
         "type": "self",
-        "idUser": "us-1"
+        "idUser": "U3"
     },
     {
-        "idOrg": "O-2",
-        "type": "special",
-        "idUser": "us-1"
-    },
-    {
-        "idOrg": "O-1",
-        "type": "child",
-        "idUser": "us-2"
-    },
-    {
-        "idOrg": "O-2",
-        "type": "special",
-        "idUser": "us-2"
-    },
-    {
-        "idOrg": "O-3",
-        "type": "special",
-        "idUser": "us-2"
-    },
-    {
-        "idOrg": "O-1",
-        "type": "all",
-        "idUser": "us-3"
-    },
-    {
-        "idOrg": "O-2",
-        "type": "special",
-        "idUser": "us-3"
-    },
-    {
-        "idOrg": "O-1",
-        "type": "all",
-        "idUser": "us-4"
-    },
-    {
-        "idOrg": "O-1",
-        "type": "child",
-        "idUser": "us-5"
-    },
-    {
-        "idOrg": "O-1",
+        "idOrg": "03",
         "type": "self",
-        "idUser": "us-6"
+        "idUser": "U4"
     },
     {
-        "idOrg": "O-1",
-        "type": "child-2",
-        "idUser": "us-7"
+        "idOrg": "01",
+        "type": "special",
+        "idUser": "U4"
+    },
+    {
+        "idOrg": "02",
+        "type": "special",
+        "idUser": "U4"
+    },
+    {
+        "idOrg": "02",
+        "type": "self",
+        "idUser": "U5"
+    },
+    {
+        "idOrg": "01",
+        "type": "special",
+        "idUser": "U5"
+    },
+    {
+        "idOrg": "01",
+        "type": "self",
+        "idUser": "U6"
+    },
+    {
+        "idOrg": "01",
+        "type": "special",
+        "idUser": "U6"
+    },
+    {
+        "idOrg": "02",
+        "type": "self",
+        "idUser": "U7"
+    },
+    {
+        "idOrg": "03",
+        "type": "special",
+        "idUser": "U7"
+    },
+    {
+        "idOrg": "01",
+        "type": "special",
+        "idUser": "U7"
+    },
+    {
+        "idOrg": "02",
+        "type": "self",
+        "idUser": "U8"
+    },
+    {
+        "idOrg": "02",
+        "type": "special",
+        "idUser": "U8"
+    },
+    {
+        "idOrg": "03",
+        "type": "special",
+        "idUser": "U8"
+    },
+    {
+        "idOrg": "01",
+        "type": "child",
+        "idUser": "U9" 
+    },
+    {
+        "idOrg": "01",
+        "type": "special",
+        "idUser": "U9"
+    },
+    {
+        "idOrg": "02",
+        "type": "self",
+        "idUser": "U10"
+    },
+    {
+        "idOrg": "02",
+        "type": "special",
+        "idUser": "U10"
     }
 ]
