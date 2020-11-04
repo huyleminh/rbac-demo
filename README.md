@@ -24,7 +24,7 @@ $ npm run start:prod
 ```
 
 ## Xem kết quả:
-  - Truy cập vào [http://localhost:3000/data/view-all](http://localhost:3000/data/view-all) để xem kết quả sau khi lọc dữ liệu của toàn bộ user.
+  - Truy cập vào [http://localhost:3000/data/view-all](http://localhost:3000/data/view-all){:target="_blank"} để xem kết quả sau khi lọc dữ liệu của toàn bộ user.
   - Vào `http://localhost:3000/data/view/:id` để xem kết quả lọc dữ liệu của người dùng với idUser là id
 
 ## Mô tả chi tiết
@@ -207,8 +207,8 @@ $ npm run start:prod
     }
     ```
 - Bước 4: 
-  - Vào [http://localhost:3000/data/view](http://localhost:3000/data/view) để xem kết quả lọc dữ liệu của toàn bộ người dùng sau khi thêm người dùng mới
-  - Vào [http://localhost:3000/data/view/U11](http://localhost:3000/data/view/U11) để xem kết quả lọc dữ liệu của người dùng số 11 vừa thêm
+  - Vào [http://localhost:3000/data/view](http://localhost:3000/data/view){:target="_blank"} để xem kết quả lọc dữ liệu của toàn bộ người dùng sau khi thêm người dùng mới
+  - Vào [http://localhost:3000/data/view/U11](http://localhost:3000/data/view/U11){:target="_blank"} để xem kết quả lọc dữ liệu của người dùng số 11 vừa thêm
 
 ## Luồng xử lí
 
