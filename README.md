@@ -274,7 +274,7 @@ $ npm run start:prod
     },
     unit: Array<
       {
-        idUnit: string | null,
+        idUnit: string,
         idOrg: string,
         idParent: string | null,
         name: string
